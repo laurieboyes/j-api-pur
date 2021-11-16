@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :games, only: [:create]
+  root 'games#index'
+  resources :games
 end
