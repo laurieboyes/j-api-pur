@@ -4,4 +4,7 @@ A ruby-on-rails implementation of the game [Jaipur](https://boardgamegeek.com/bo
 
 ## Development dependencies
 
-Configured for development with Visual Studio Code. The [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) extension is recommended.
+Configured for development with Visual Studio Code. The following extensions are recommended:
+
+ * [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) for linting, formatting
+ * [solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) for intellisense

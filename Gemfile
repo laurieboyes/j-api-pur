@@ -58,3 +58,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'rubocop', '~> 1.23'
+
+gem 'solargraph', '~> 0.44.0'
