@@ -1,24 +1,7 @@
-# README
+# jAPIpur
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ruby-on-rails implementation of the game [Jaipur](https://boardgamegeek.com/boardgame/54043/jaipur), developed for learning purposes.
 
-Things you may want to cover:
+## Development dependencies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Configured for development with Visual Studio Code. The [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) extension is recommended.
