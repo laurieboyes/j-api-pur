@@ -2,18 +2,22 @@
 
 module Services
   class Deck
+    STARTING_MARKET_CAMELS = 3
+
+    CARD_QUANTITIES = {
+      'diamond' => 6,
+      'gold' => 6,
+      'silver' => 6,
+      'cloth' => 8,
+      'spice' => 8,
+      'leather' => 10,
+      'camel' => 11 - STARTING_MARKET_CAMELS
+    }.freeze
+
     def self.get_fresh_deck
-      'hello'
+      CARD_QUANTITIES
+        .reduce([]) { |acc, (card_name, quantity)| acc + Array.new(quantity).fill(card_name) }
+        .shuffle
     end
   end
 end
-
-# define the constants for the cards avaible in the deck
-
-# getNewDeck
-#   return an array of strings repping the cards in the shuffled deck, minus the 3 start camels
-#
-#   for each type of card
-#     loop add the right number to the array of strings
-#   shuffle the array
-#   return it
