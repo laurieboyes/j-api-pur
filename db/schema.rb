@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_211_117_142_216) do
+ActiveRecord::Schema.define(version: 20_211_117_152_732) do
   create_table 'games', force: :cascade do |t|
     t.integer 'rounds_finished'
     t.datetime 'created_at', precision: 6, null: false
@@ -20,4 +20,17 @@ ActiveRecord::Schema.define(version: 20_211_117_142_216) do
     t.string 'deck'
     t.string 'market'
   end
+
+  create_table 'players', force: :cascade do |t|
+    t.string 'rounds_won'
+    t.string 'hand'
+    t.integer 'herd'
+    t.string 'tokens'
+    t.integer 'game_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['game_id'], name: 'index_players_on_game_id'
+  end
+
+  add_foreign_key 'players', 'games'
 end

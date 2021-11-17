@@ -3,6 +3,7 @@
 class Game < ApplicationRecord
   serialize :market, Array
   serialize :deck, Array
+  has_many :players
   after_initialize :init
 
   def init

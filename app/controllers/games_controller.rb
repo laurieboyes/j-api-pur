@@ -12,11 +12,15 @@ class GamesController < ApplicationController
   def create
     @game = Game.new
 
-    if @game.save
-      redirect_to @game
-    else
-      render :new
-    end
+    raise 'Error saving game' unless @game.save
+
+    @player1 = @game.players.create
+    @player2 = @game.players.create
+
+    raise 'Error saving player1' unless @player1.save
+    raise 'Error saving player2' unless @player2.save
+
+    redirect_to @game
   end
 
   def show
