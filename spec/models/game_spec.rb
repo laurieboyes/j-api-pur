@@ -17,6 +17,6 @@ describe Game, type: :model do
       expect(game.market.length).to eql 5
     end
 
-    it 'has the expected number of cards in the deck after initialisation'
+    # it 'has the expected number of cards in the deck after initialisation'
   end
 end
