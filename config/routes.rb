@@ -2,5 +2,7 @@
 
 Rails.application.routes.draw do
   root 'games#index'
-  resources :games, only: %i[index show new create]
+  resources :games, only: %i[index show new create] do
+    resources :players, only: %i[show]
+  end
 end
