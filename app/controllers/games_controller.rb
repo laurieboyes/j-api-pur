@@ -14,10 +14,8 @@ class GamesController < ApplicationController
 
     raise 'Error saving game' unless @game.save
 
-    @game.create_player
-    @game.create_player
-
-    raise 'Error saving game' unless @game.save
+    @game.create_player.save
+    @game.create_player.save
 
     redirect_to @game
   end

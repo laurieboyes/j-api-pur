@@ -11,13 +11,19 @@ class Game < ApplicationRecord
 
     self.rounds_finished = 0
     self.deck = Services::Deck.get_fresh_deck
-    self.deck, self.market = Services::Deck.fill_market(deck, Services::Deck::INITIAL_MARKET)
+    self.deck, self.market = Services::Deck.fill_market(deck, Services::Game::INITIAL_MARKET)
                                            .values_at(:new_deck, :new_market)
   end
 
   def create_player
-    return unless players.length < 2
+    raise 'Tried to create more than two players for a single game' if players.length >= 2
 
-    players.create
+    player = players.create
+    player.rounds_won = 0
+    player.tokens = {}
+    self.deck, player.hand = Services::Deck.take_cards(deck, Services::Game::STARTING_HAND_SIZE).values_at(:new_deck,
+                                                                                                           :cards)
+    player.herd = 0 # todo
+    player
   end
 end
