@@ -62,3 +62,5 @@ gem 'rubocop', '~> 1.23'
 gem 'solargraph', '~> 0.44.0'
 
 gem 'rspec', '~> 3.10'
+
+gem 'guard-rspec', '~> 4.7'

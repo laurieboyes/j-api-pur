@@ -17,8 +17,11 @@ Configured for development with Visual Studio Code. The following extensions are
 # Run app
 bin/rails server
 
-# Run unit tests
+# Run unit tests once
 bundle exec rspec
+
+# Run unit tests in watch mode
+bundle exec guard
 
 # Run linter with autofix
 bundle exec rubocop -A
