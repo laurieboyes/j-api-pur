@@ -5,5 +5,7 @@ class Game < ApplicationRecord
 
   def init
     self.roundsFinished = 0
+
+    deck = Services::Deck.get_fresh_deck
   end
 end

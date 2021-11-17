@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Services
-  class DeckService
+  class Deck
     def self.get_fresh_deck
       'hello'
     end
