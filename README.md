@@ -8,3 +8,19 @@ Configured for development with Visual Studio Code. The following extensions are
 
  * [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) for linting, formatting
  * [solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) for intellisense
+
+
+## Dev commands
+
+```
+
+# Run app
+bin/rails server
+
+# Run unit tests
+bundle exec rspec
+
+# Run linter with autofix
+bundle exec rubocop -A
+
+```
