@@ -13,13 +13,11 @@ class Game < ApplicationRecord
     self.deck = Services::Deck.get_fresh_deck
     self.deck, self.market = Services::Deck.fill_market(deck, Services::Deck::INITIAL_MARKET)
                                            .values_at(:new_deck, :new_market)
-    # player1 = new player
-    #   roundsWon = 0
-    #   hand = 5 from deck
-    #   headCount = take any from hand
-    #   tokens = []
-    # game.tokens = the start tokens
+  end
 
-    # save it
+  def create_player
+    return unless players.length < 2
+
+    players.create
   end
 end
