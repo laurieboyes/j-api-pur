@@ -12,8 +12,6 @@ class Game < ApplicationRecord
     self.deck = Services::Deck.get_fresh_deck
     self.deck, self.market = Services::Deck.fill_market(deck, Services::Deck::INITIAL_MARKET)
                                            .values_at(:new_deck, :new_market)
-
-    # market = 3 camels + 2 from deck
     # player1 = new player
     #   roundsWon = 0
     #   hand = 5 from deck
