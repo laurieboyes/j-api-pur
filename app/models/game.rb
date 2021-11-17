@@ -8,7 +8,7 @@ class Game < ApplicationRecord
   def init
     return unless new_record?
 
-    self.roundsFinished = 0
+    self.rounds_finished = 0
     self.deck = Services::Deck.get_fresh_deck
     self.deck, self.market = Services::Deck.fill_market(deck, Services::Deck::INITIAL_MARKET)
                                            .values_at(:new_deck, :new_market)
