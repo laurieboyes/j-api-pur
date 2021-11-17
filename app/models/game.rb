@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
 class Game < ApplicationRecord
+  serialize :deck, Array
   after_initialize :init
 
   def init
-    self.roundsFinished = 0
+    return unless new_record?
 
-    # get deck  deck = Services::Deck.get_fresh_deck
+    self.roundsFinished = 0
+    self.deck = Services::Deck.get_fresh_deck
+
     # market = 3 camels + 2 from deck
     # player1 = new player
     #   roundsWon = 0
